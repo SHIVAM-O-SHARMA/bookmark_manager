@@ -6,6 +6,7 @@ import mainimg from './assets/images/mainimg.png';
 import twitter from './assets/images/twitter.png';
 import facebook from './assets/images/facebook.png';
 import { FAQ } from './assets/components/toggle';
+import { FeatureCard } from './assets/components/features';
 
 function App(){
   return (
@@ -54,13 +55,9 @@ function App(){
       </div>
       </section>     
 
-      <section className='text-center mx-auto max-w-3xl space-x-15 text-[#4b5563] pt-16 transition-colors duration-300'>
-        <a className='hover:text-[#f95657]' href="#">Simple Bookmarking</a>
-        <a className='hover:text-[#f95657]' href="">Speedy Searching</a>
-        <a className='hover:text-[#f95657]' href="#">Easy Sharing</a>
-
-        <h1 className='font-bold text-[40px]'>pending part</h1>
-      </section>
+      <section>
+       <FeatureCard/>
+       </section>
 
       <section id='downloads' className='text-center pt-20'>
         <h4 className='text-[34px] font-bold pb-5'>Download the extension</h4>
@@ -114,41 +111,5 @@ function App(){
     </div>
   )
 }
-
-// function FAQ() {
-//   const [openIndex, setOpenIndex] = useState(null);
-
-//   const faqs = [
-//     { question: "What is Bookmark?", answer: "Bookmark is a simple bookmark manager app to organise your favourite websites easily." },
-//     { question: "How can I request a new browser?", answer: "You can request via our Contact Us section. We consider all requests seriously." },
-//     { question: "Is there a mobile app?", answer: "Currently, we do not have a mobile app but we plan to launch it soon." },
-//     { question: "What about other Chromium browsers?", answer: "Support for other Chromium browsers is under development and will be released soon." },
-//   ];
-
-//   const toggle = (index) => {
-//     setOpenIndex(openIndex === index ? null : index);
-//   }
-
-//   return (
-//     <div className='max-w-2xl mx-auto text-left'>
-//       {faqs.map((faq, index) => (
-//         <div key={index} className='border-b py-4'>
-//           <div className='flex justify-between items-center'>
-//             <p className='text-[18px] font-medium text-gray-600'>{faq.question}</p>
-//             <button
-//               className='text-red-500 text-[20px]'
-//               onClick={() => toggle(index)}
-//             >
-//               {openIndex === index ? '▲' : '▼'}
-//             </button>
-//           </div>
-//           {openIndex === index && (
-//             <p className='text-gray-500 mt-2'>{faq.answer}</p>
-//           )}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
 
 export default App;
