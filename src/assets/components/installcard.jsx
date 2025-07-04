@@ -1,6 +1,6 @@
-import Chromeimg from '../images/Chrome.png'
-import Firefoximg from '../images/Firefox.png'
-import Operaimg from '../images/Opera.png'
+import Chromeimg from '../images/chrome.png'
+import Firefoximg from '../images/firefox.png'
+import Operaimg from '../images/opera.png'
 
 function Addcard({image,title,description}){
     return(
