@@ -86,8 +86,8 @@ function App(){
       </section>
      </main>
 
-     <footer className='bg-[#252b46] h-38'>
-      <div className='grid grid-cols-7 pt-15 px-4'>
+     <footer className='bg-[#252b46] h-26'>
+      <div className='grid grid-cols-7 pt-10 px-4'>
       <div className='flex col-span-1 text-[20px]'>
         <img className='w-9 h-9' src={logo} alt="logo" />
         <h4 className='text-white font-semibold'>BOOKMARK</h4>
