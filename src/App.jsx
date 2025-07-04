@@ -5,6 +5,7 @@ import logo from './assets/images/logo.png';
 import mainimg from './assets/images/mainimg.png';
 import twitter from './assets/images/twitter.png';
 import facebook from './assets/images/facebook.png';
+import { FAQ } from './assets/components/toggle';
 
 function App(){
   return (
@@ -17,9 +18,9 @@ function App(){
               <div><img src={logo} alt="logo" /></div>
               <div className='font-bold text-[25px] translate-1.5 '><h3>BOOKMARK</h3></div></div>
             <div className='col-span-2 space-x-9 font-sans text-[#9699a6] text-[18px]'>
-              <a className='hover:text-red-400 transition-colors duration-200' href="#">FEATURES</a>
-              <a className='hover:text-red-400 transition-colors duration-200' href="#">DOWNLOAD</a>
-              <a className='hover:text-red-400 transition-colors duration-200' href="#">FAQ</a>
+              <a className='hover:text-red-400 transition-colors duration-200' href="#features">FEATURES</a>
+              <a className='hover:text-red-400 transition-colors duration-200' href="#downloads">DOWNLOAD</a>
+              <a className='hover:text-red-400 transition-colors duration-200' href="#faQ">FAQ</a>
               <button className='bg-[#f95657] px-7 py-2 rounded-md shadow-md text-white hover:bg-white hover:text-[#f95657] hover:border-2 border-[#f95657] cursor-pointer'>LOGIN</button>
             </div>
           </div>
@@ -75,6 +76,7 @@ function App(){
         <p className='text-[#9699a6] text-[17px] pb-10'>Here are some of our FAQs. If you have any other questions <br /> you'd like answered please feel free to email us.</p>
         <FAQ />
       </section>
+
       <section className='bg-[#5367DF] h-100 text-white text-center'>
         <div className='translate-y-15'>
         <p className='text-[20px]'>35,000+ ALREADY JOINED</p>
@@ -113,40 +115,40 @@ function App(){
   )
 }
 
-function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+// function FAQ() {
+//   const [openIndex, setOpenIndex] = useState(null);
 
-  const faqs = [
-    { question: "What is Bookmark?", answer: "Bookmark is a simple bookmark manager app to organise your favourite websites easily." },
-    { question: "How can I request a new browser?", answer: "You can request via our Contact Us section. We consider all requests seriously." },
-    { question: "Is there a mobile app?", answer: "Currently, we do not have a mobile app but we plan to launch it soon." },
-    { question: "What about other Chromium browsers?", answer: "Support for other Chromium browsers is under development and will be released soon." },
-  ];
+//   const faqs = [
+//     { question: "What is Bookmark?", answer: "Bookmark is a simple bookmark manager app to organise your favourite websites easily." },
+//     { question: "How can I request a new browser?", answer: "You can request via our Contact Us section. We consider all requests seriously." },
+//     { question: "Is there a mobile app?", answer: "Currently, we do not have a mobile app but we plan to launch it soon." },
+//     { question: "What about other Chromium browsers?", answer: "Support for other Chromium browsers is under development and will be released soon." },
+//   ];
 
-  const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  }
+//   const toggle = (index) => {
+//     setOpenIndex(openIndex === index ? null : index);
+//   }
 
-  return (
-    <div className='max-w-2xl mx-auto text-left'>
-      {faqs.map((faq, index) => (
-        <div key={index} className='border-b py-4'>
-          <div className='flex justify-between items-center'>
-            <p className='text-[18px] font-medium text-gray-600'>{faq.question}</p>
-            <button
-              className='text-red-500 text-[20px]'
-              onClick={() => toggle(index)}
-            >
-              {openIndex === index ? '▲' : '▼'}
-            </button>
-          </div>
-          {openIndex === index && (
-            <p className='text-gray-500 mt-2'>{faq.answer}</p>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
+//   return (
+//     <div className='max-w-2xl mx-auto text-left'>
+//       {faqs.map((faq, index) => (
+//         <div key={index} className='border-b py-4'>
+//           <div className='flex justify-between items-center'>
+//             <p className='text-[18px] font-medium text-gray-600'>{faq.question}</p>
+//             <button
+//               className='text-red-500 text-[20px]'
+//               onClick={() => toggle(index)}
+//             >
+//               {openIndex === index ? '▲' : '▼'}
+//             </button>
+//           </div>
+//           {openIndex === index && (
+//             <p className='text-gray-500 mt-2'>{faq.answer}</p>
+//           )}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
 
 export default App;
